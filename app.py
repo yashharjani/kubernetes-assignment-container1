@@ -41,7 +41,7 @@ def calculate():
     file_name = data['file']
     file_path = os.path.join(STORAGE_DIR, file_name)
 
-    # Checking if the file exists in persistent volume
+    # Check if the file exists in persistent volume
     if not os.path.exists(file_path):
         return jsonify({"file": file_name, "error": "File not found."}), 404
 
