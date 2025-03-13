@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: container1
-        image: us-central1-docker.pkg.dev/kubernetes-assignment-453322/container1:latest
+        image: us-central1-docker.pkg.dev/kubernetes-assignment-453322/k8s-assignment/container1:latest
         volumeMounts:
         - mountPath: /yash_PV_dir
           name: standard-volume
