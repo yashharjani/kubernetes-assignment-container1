@@ -15,12 +15,10 @@ spec:
       containers:
       - name: container1
         image: us-central1-docker.pkg.dev/kubernetes-assignment-453322/container1:latest
-        ports:
-        - containerPort: 6000
         volumeMounts:
-        - name: storage
-          mountPath: "/yash_PV_dir"
+        - mountPath: /yash_PV_dir
+          name: standard-volume
       volumes:
-      - name: storage
+      - name: standard-volume
         persistentVolumeClaim:
-          claimName: yash-pvc
+          claimName: standard-rwo-pvc
