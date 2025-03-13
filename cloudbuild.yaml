@@ -5,6 +5,13 @@ steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'us-central1-docker.pkg.dev/kubernetes-assignment-453322/k8s-assignment/container1']
 
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --image='us-central1-docker.pkg.dev/kubernetes-assignment-453322/k8s-assignment/container1'
+  - --location='us-central1'
+  - --cluster='gke-cluster'
+
 images:
 - 'us-central1-docker.pkg.dev/kubernetes-assignment-453322/k8s-assignment/container1'
 
