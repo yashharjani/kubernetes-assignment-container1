@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-# Persistent storage directory
+# Persistent storage directory path
 STORAGE_DIR = "/yash_PV_dir"
 os.makedirs(STORAGE_DIR, exist_ok=True)
 
